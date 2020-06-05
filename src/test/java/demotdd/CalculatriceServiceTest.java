@@ -17,7 +17,7 @@ public class CalculatriceServiceTest {
 		System.out.println("On initialise les ressources");
 	}
 	
-	@Test
+	@Test(timeout=10)
 	public void TestAddition() {
 		System.out.println("Test Addition");
 		int resultat = calculatriceService.Addition(3,4);
@@ -26,7 +26,7 @@ public class CalculatriceServiceTest {
 		
 	}
 	
-	@Test(expected = ArithmeticException.class)
+	@Test(expected = ArithmeticException.class,timeout=10)
 	public void TestDivisonZeroWithException() {
 		System.out.println("Test Division per zero");
 		int resultat = calculatriceService.DivisionZero(3);
